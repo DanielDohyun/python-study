@@ -27,3 +27,16 @@ print(parrot[3:5])
 
 print(parrot[10:14]) # returns Blue
 print(parrot[10:])
+
+# steps in a splice
+print(parrot[0:6:2]) # returns Nre
+print(parrot[0:6:3]) # returns Nw
+
+number = "1,234;292:011 853,883;111"
+seperators = number[1::4]
+print(seperators)
+
+values = "".join(char if char not in seperators else " " for char in number).split()
+print([int(val) for val in values])
+
+
